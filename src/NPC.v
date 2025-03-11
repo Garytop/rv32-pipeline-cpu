@@ -28,7 +28,7 @@ module NPC(
     end // end always
 
     always @(*) begin
-        $display("NPC: %h", NPC);
+        $display("NPC: %h, NPCOp: %b", NPC, NPCOp);
     end
 
 endmodule

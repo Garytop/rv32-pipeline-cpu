@@ -8,7 +8,7 @@ module plcomp_tb();
   
   initial begin
     // input instructions for simulation
-    $readmemh("jmpfwd1.dat", plcomp.U_imem.RAM); //( 21 ins-25cycles )
+    $readmemh("riscv_sidascsorting_sim.dat", plcomp.U_imem.RAM); //( 21 ins-25cycles )
     clk = 0;
     rstn = 1;
     #50 ;

@@ -88,7 +88,7 @@ module ctrl(
   assign NPCOp[3] = 0;
   assign NPCOp[2] = i_jalr;
   assign NPCOp[1] = i_jal;
-  assign NPCOp[0] = sbtype & Zero;
+  assign NPCOp[0] = sbtype;
 
   // assign jal_taken = i_jal;
 
@@ -102,5 +102,13 @@ module ctrl(
   assign ALUOp[2] = i_sub | i_xor | i_or | i_and | i_sll | i_ori | i_xori | i_slli | i_andi | i_bgeu | i_blt | i_bltu | i_jal;
   assign ALUOp[1] = i_add | i_slt | i_sltu | i_sll | i_andi | i_slli | i_slti | i_sltui | i_and | itype_l | stype | i_jal | i_addi | i_bge | i_bltu | i_jal | i_beq;
   assign ALUOp[0] = LUI | i_add | i_sltu | i_or | i_sll | i_sra | i_ori | i_srai | i_slli | i_sltui | itype_l | stype | i_jal | i_addi | i_bge | i_blt | i_jal | i_bne;
+
+  // always @(*) begin
+  //   $write("ALUOp:%b\n", ALUOp);
+  // end
+
+  // always @(*) begin
+  //   $write("NPCOp:%b\n", NPCOp);
+  // end
 
 endmodule

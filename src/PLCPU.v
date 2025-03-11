@@ -231,7 +231,7 @@ end
     assign EX_RegWrite = ID_EX_out[143];//RFWr
     assign EX_MemWrite = ID_EX_out[144];//DMWr
     assign EX_ALUOp = ID_EX_out[149:145];
-    assign EX_NPCOp = ID_EX_out[154:150];
+    assign EX_NPCOp = {ID_EX_out[154:151], ID_EX_out[150] & Zero};
     assign EX_ALUSrc = ID_EX_out[155];
     assign EX_DMType = ID_EX_out[158:156];
     assign EX_WDSel = ID_EX_out[160:159];

@@ -49,9 +49,11 @@ module alu(
 
     assign Zero = (C == 32'b0);
 
-    always @(*) begin
-        $display("flush: %b", flush);
-    end
+    // always @(*) begin
+    //     $display("flush: %b", flush);
+    //     $display("aluop: %b", ALUOp);
+    //     $display("A: %d, B: %d, C: %d", A, B, C);
+    // end
 
 endmodule
 
